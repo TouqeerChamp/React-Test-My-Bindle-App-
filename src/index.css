@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* 🌙 Tailwind v4 Dark Mode Class Strategy */
+@variant dark (&:where(.dark, .dark *));
+
+/* Smooth transition for background colors */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Base styles for dark mode */
+.dark body {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+/* Standard Tailwind Directives (Backup) */
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+
